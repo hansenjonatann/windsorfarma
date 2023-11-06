@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:windsor_farma/util/util.dart';
+import 'package:windsor_farma/util/config.dart';
 
 class Dokter {
   final String? idDokter, nama, hp;
