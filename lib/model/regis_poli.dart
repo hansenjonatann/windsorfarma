@@ -37,7 +37,8 @@ List<RegisPoli> regisPoliFromJson(jsonData) {
 Future<List<RegisPoli>> fetchRegisPolis() async {
   final prefs = await SharedPreferences.getInstance();
   String idPasien = prefs.getString(ID_PASIEN) ?? "";
-  String route = AppConfig.API_ENDPOINT + "regis-poli/index.php";
+  String route =
+      AppConfig.API_ENDPOINT + "regis-poli/index.php?id_pasien=$idPasien";
   final response = await http.get(route as Uri);
   if (response.statusCode == 200) {
     var jsonResp = json.decode(response.body);
@@ -57,7 +58,7 @@ Future regisPoliCreate(RegisPoli regisPoli) async {
         headers: {"Content-Type": "application/json"},
         body: jsonEncode({
           'id_pasien': prefs.getString(ID_PASIEN),
-          'id_dokter': regisPoli.idDokter.idDokter,
+          'id_dokter': regisPoli.idDokter?.idDokter,
           'tgl_booking': regisPoli.tglBooking,
           'poli': regisPoli.poli
         }));
