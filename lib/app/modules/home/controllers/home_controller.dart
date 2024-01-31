@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:windsorfarma/app/modules/medicine/views/medicine_view.dart';
 import 'package:windsorfarma/app/routes/app_pages.dart';
 
 class HomeController extends GetxController {

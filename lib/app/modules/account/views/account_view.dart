@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:windsorfarma/app/modules/account/views/edit_profile_view.dart';
+import 'package:windsorfarma/app/views/views/bottom_navigation_bar_view.dart';
 
 import 'package:windsorfarma/constants/color.dart';
 
@@ -72,6 +73,7 @@ class AccountView extends GetView<AccountController> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBarView(currentSelectionIndex: 2),
     );
   }
 }

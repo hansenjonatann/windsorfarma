@@ -13,7 +13,7 @@ class SectionWidgetView extends GetView {
 
   final String sectionTitle;
   final String subSectionTitle;
-  final Function(int)? onTap;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {

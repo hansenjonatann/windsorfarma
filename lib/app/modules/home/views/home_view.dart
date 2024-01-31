@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import 'package:google_fonts/google_fonts.dart';
-import 'package:windsorfarma/app/modules/medicine/views/medicine_view.dart';
-
 import 'package:windsorfarma/app/routes/app_pages.dart';
 
 import 'package:windsorfarma/app/views/views/bottom_navigation_bar_view.dart';
@@ -52,14 +49,16 @@ class HomeView extends GetView<HomeController> {
               SectionWidgetView(
                   sectionTitle: 'Medicine',
                   subSectionTitle: 'See all medicines',
-                  onTap: (p0) => controller.seeAllMedicines()),
+                  onTap: () {
+                    controller.seeAllMedicines();
+                  }),
               const SizedBox(
                 height: 20.0,
               ),
               GridView.builder(
                 padding: EdgeInsets.zero,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  childAspectRatio: 1.0 / 1.5,
+                  childAspectRatio: 1.0 / 2.0,
                   crossAxisCount: 2,
                   mainAxisSpacing: 12,
                   crossAxisSpacing: 10,
